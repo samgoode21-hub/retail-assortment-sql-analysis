@@ -30,10 +30,9 @@ metrics, and IS NULL analysis to identify products that never sold.
 - **Assortment efficiency is high, with negligible dead inventory**: only 63 of roughly 29,000 catalog products have never sold (0.2%), and those are spread evenly across 20 categories with a maximum of 8 in any single one (Intimates), indicating no systemic over-assortment.
 
 ## Dataset
-**Source:** Google BigQuery Public Data
-
-**Dataset:** `bigquery-public-data.thelook_ecommerce`
-
+**Source:** Google BigQuery Public Data<br>
+**Dataset:** `bigquery-public-data.thelook_ecommerce`<br>
+**Rows:** 180,836
 **Tables Used:** `order_items`, `products`, `users`
 
 **Key Columns:**
