@@ -27,14 +27,14 @@ metrics, and IS NULL analysis to identify products that never sold.
 - **Revenue rank does not equal profit rank**: Accessories generates $64.8K in profit, outranking four categories that produced more revenue, indicating stronger margins on lower sales volume.
 - **Customer age does not meaningfully segment value**: per-customer revenue is flat across ages 20-69, ranging only from $97.89 to $99.71 (under a 2% spread) with near-identical customer counts. Only the tails differ, with Under-20 at $95.75 and 70+ at $92.67 across just 484 customers.
 - **The top ten brands, out of 2,756 total, split into two distinct archetypes**: volume brands like Calvin Klein generate $53.4K across 817 units sold at $65.36 per unit, while premium brands like The North Face reach the top ten on only 59 units at $443.64 per unit.
-- **Assortment efficiency is high, with negligible dead inventory**: only 63 of roughly 29,000 catalog products have never sold (0.2%), and those are spread evenly across 20 categories with a maximum of 8 in any single one (Intimates), indicating no systemic
+- **Assortment efficiency is high, with negligible dead inventory**: only 63 of roughly 29,000 catalog products have never sold (0.2%), and those are spread evenly across 20 categories with a maximum of 8 in any single one (Intimates), indicating no systemic over-assortment.
 
 ## Dataset
 
-**Source:** Google BigQuery Public Data
-**Dataset:** `bigquery-public-data.thelook_ecommerce`
-**Tables Used:** `order_items`, `products`, `users`
-**Scale:** 180,836 order items | 100,000 customers | 29,120 products | 2,756 brands | 26 categories
+- **Source:** Google BigQuery Public Data
+- **Dataset:** `bigquery-public-data.thelook_ecommerce`
+- **Tables Used:** `order_items`, `products`, `users`
+- **Scale:** 180,836 order items | 100,000 customers | 29,120 products | 2,756 brands | 26 categories
 
 **Key Columns:**
 - `products.category`, `products.brand`, `products.name` — product dimensions
@@ -44,7 +44,7 @@ metrics, and IS NULL analysis to identify products that never sold.
 
 **Methodology Notes:**
 - **Revenue is defined as completed sales only.** Order status includes Complete, Shipped, Processing, Cancelled, and Returned. Cancelled and Returned orders represent roughly 25% of gross transaction value and were excluded from all revenue and profit calculations, since that money was never realized.
-- **This dataset does not model promotional discounting.** Verification confirmed that `sale_price` equals `retail_price`
+- **This dataset does not model promotional discounting.** Verification confirmed that `sale_price` equals `retail_price` equals retail_price across all records, meaning discount depth and promotional lift cannot be measured here. Analysis therefore focuses on category and brand profitability rather than promotional effectiveness.
 
 ## Tools Used
 
