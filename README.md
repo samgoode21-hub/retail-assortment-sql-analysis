@@ -41,8 +41,8 @@ metrics, and IS NULL analysis to identify products that never sold.
 - `users.age`, `users.id` — customer dimensions
 
 **Methodology Notes:**
-- **Revenue is defined as completed sales only.** Order status includes Complete, Shipped, Processing, Cancelled, and Returned. Cancelled and Returned orders represent roughly 25% of gross transaction value and were excluded from all revenue and profit calculations, since that money was never realized.
-- **This dataset does not model promotional discounting.** Verification confirmed that `sale_price` equals `retail_price` equals retail_price across all records, meaning discount depth and promotional lift cannot be measured here. Analysis therefore focuses on category and brand profitability rather than promotional effectiveness.
+- **Revenue is defined as completed sales only.** Order status includes Complete, Shipped, Processing, Cancelled, and Returned. Cancelled and Returned orders were excluded from all revenue and profit calculations, since that money wasn't realized.
+- **This dataset does not model promotional discounting.** Verification confirmed that `sale_price` equals `retail_price` across all records, meaning discount depth and promotional lift cannot be measured here. Analysis therefore focuses on category and brand profitability rather than promotional effectiveness.
 
 ## Tools Used
 
