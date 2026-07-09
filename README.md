@@ -21,7 +21,7 @@ metrics, and IS NULL analysis to identify products that never sold.
 3. Which brands generated the most completed revenue, and do they win on volume or price?
 4. Which product categories carry the most never-sold inventory?
 
-5. ## Key Findings
+## Key Findings
 
 - **Outerwear & Coats and Jeans dominate category profit**, at $193K and $148K respectively, leading on both revenue and profit.
 - **Revenue rank does not equal profit rank**: Accessories generates $64.8K in profit, outranking four categories that produced more revenue, indicating stronger margins on lower sales volume.
@@ -29,7 +29,7 @@ metrics, and IS NULL analysis to identify products that never sold.
 - **The top ten brands, out of 2,756 total, split into two distinct archetypes**: volume brands like Calvin Klein generate $53.4K across 817 units sold at $65.36 per unit, while premium brands like The North Face reach the top ten on only 59 units at $443.64 per unit.
 - **Assortment efficiency is high, with negligible dead inventory**: only 63 of roughly 29,000 catalog products have never sold (0.2%), and those are spread evenly across 20 categories with a maximum of 8 in any single one (Intimates), indicating no systemic
 
-- ## Dataset
+## Dataset
 
 **Source:** Google BigQuery Public Data
 **Dataset:** `bigquery-public-data.thelook_ecommerce`
@@ -46,13 +46,13 @@ metrics, and IS NULL analysis to identify products that never sold.
 - **Revenue is defined as completed sales only.** Order status includes Complete, Shipped, Processing, Cancelled, and Returned. Cancelled and Returned orders represent roughly 25% of gross transaction value and were excluded from all revenue and profit calculations, since that money was never realized.
 - **This dataset does not model promotional discounting.** Verification confirmed that `sale_price` equals `retail_price`
 
-- ## Tools Used
+## Tools Used
 
 - **SQL (BigQuery Standard SQL)** — primary analysis language
 - **Google BigQuery** — query execution and data exploration
 - **GitHub** — project documentation and version control
 
-- ## Project Structure
+## Project Structure
 
 ```
 retail-assortment-sql-analysis/
