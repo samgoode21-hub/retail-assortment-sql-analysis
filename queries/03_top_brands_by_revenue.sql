@@ -1,8 +1,11 @@
--- Query 3: Top Brands by Revenue
--- Business question: Which brands generated the most completed revenue, and do they win on volume or price?
--- Units sold and average price per unit are included to distinguish volume-driven
--- brands from premium, low-volume brands within the same revenue tier.
--- Revenue defined as completed sales only (excludes cancelled and returned orders).
+-- ============================================
+-- Query 03: Top Brands by Revenue
+-- ============================================
+-- Business Question: Which brands generated the most completed 
+-- revenue, and do they win on volume or price?
+-- SQL Concepts: INNER JOIN, GROUP BY, SUM, COUNT, ROUND, LIMIT
+-- Note: Units sold and average price per unit distinguish volume-driven
+-- brands from premium, low-volume brands.
 
 SELECT
   p.brand,
