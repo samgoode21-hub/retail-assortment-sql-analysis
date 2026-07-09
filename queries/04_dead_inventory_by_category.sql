@@ -1,9 +1,11 @@
--- Query 4: Dead Inventory by Category
--- Business question: Which product categories carry the most never-sold inventory?
--- A LEFT JOIN retains every product, including those with no matching sales.
--- Products that never sold have no order_id after the join, so filtering on
--- IS NULL isolates them. An INNER JOIN cannot answer this question, since it
--- discards the unmatched rows that are the answer.
+-- ============================================
+-- Query 04: Dead Inventory by Category
+-- ============================================
+-- Business Question: Which product categories carry 
+-- the most never-sold inventory?
+-- SQL Concepts: LEFT JOIN, IS NULL, GROUP BY, COUNT, ORDER BY
+-- Note: LEFT JOIN retains products with no matching sales. Filtering on
+-- IS NULL isolates them. An INNER JOIN cannot answer this question.
 
 SELECT
   p.category,
