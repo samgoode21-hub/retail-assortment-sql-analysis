@@ -1,8 +1,11 @@
--- Query 2: Revenue by Customer Age Segment
--- Business question: Which customer age groups generate the most completed revenue?
--- Age is bucketed into even-width brackets to avoid biasing comparisons by bin size.
--- Revenue per customer is included to separate segment size from customer value.
--- Revenue defined as completed sales only (excludes cancelled and returned orders).
+-- ============================================
+-- Query 02: Revenue by Customer Age Segment
+-- ============================================
+-- Business Question: Which customer age groups 
+-- generate the most completed revenue?
+-- SQL Concepts: INNER JOIN, CASE WHEN, COUNT DISTINCT, GROUP BY, ROUND
+-- Note: Age brackets are even-width to avoid bin-size bias. Revenue per
+-- customer separates segment size from customer value.
 
 SELECT
   CASE
