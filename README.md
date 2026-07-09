@@ -32,8 +32,8 @@ metrics, and IS NULL analysis to identify products that never sold.
 ## Dataset
 **Source:** Google BigQuery Public Data<br>
 **Dataset:** `bigquery-public-data.thelook_ecommerce`<br>
-**Rows:** 180,836
-**Tables Used:** `order_items`, `products`, `users`
+**Rows:** 180,836<br>
+**Tables Used:** `order_items`, `products`, `users`<br>
 
 **Key Columns:**
 - `products.category`, `products.brand`, `products.name` — product dimensions
