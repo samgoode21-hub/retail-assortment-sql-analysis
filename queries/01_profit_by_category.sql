@@ -1,6 +1,10 @@
--- Query 1: Profit by Category
--- Business question: Which product categories generate the most profit?
--- Revenue defined as completed sales only (excludes cancelled and returned orders).
+-- ============================================
+-- Query 01: Profit by Category
+-- ============================================
+-- Business Question: Which product categories 
+-- generate the most profit?
+-- SQL Concepts: INNER JOIN, GROUP BY, SUM, ROUND, ORDER BY
+-- Note: Revenue defined as completed sales only.
 
 SELECT
   p.category,
